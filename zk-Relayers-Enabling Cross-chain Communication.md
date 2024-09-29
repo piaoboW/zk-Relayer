@@ -68,14 +68,14 @@
 
 公证人是加密数字资产跨链交易中最简单的。例如，Alice将A数字资产打到公证人的地址，然后在公证人服务器中挂单，接下来Bod将B数字资产打到公证人地址，在公证人挂买单，最后公证人完成撮合后，将A资产打到Bob的A资产地址中，将B资产打到Alice的B资产地址。公证人机制的缺点是存在中心化风险。
 
-![alt text](<fig_Relayer\deal.png>)
+![alt text](<fig_Relayer/deal.png>)
 <p align="center"><font face="黑体" size=3.>Figure 1 Notary Public Mechanism</font></p>
 
 
 #### 2.2.2 哈希锁定技术
 交易者会首先在各自的链上使用哈希锁对资产进行锁定，并且使用时间锁来保证在公布哈希锁的原项前资产不会被取走。哈希时间锁定并不仅仅针对公有链，在联盟链中也可以集成。但是哈希时间锁定依然有缺陷，例如会造成交易的不公平，后加锁的一方或者先解锁的一方可以根据加密数字资产的价格来决定是否进行交易。
 
-![alt text](<fig_Relayer\Hash locked.png>)
+![alt text](<fig_Relayer/Hash locked.png>)
 <p align="center"><font face="黑体" size=3.>Figure 2 Hash locking technology</font></p>
 
 #### 2.2.3 侧链
@@ -110,11 +110,11 @@
 
 由于跨链实际上是信息的交互，因此可以有不同的实现方式。例如下面两图分别是A cross-chain form of independent interconnection and Cross-chain form of using connectors。
 
-![alt text](<fig_Relayer\LIN1.png>)
+![alt text](<fig_Relayer/LIN1.png>)
 <p align="center"><font face="黑体" size=3.>Figure 3 Cross-chain form of independent interconnection</font></p>
 
 
-![alt text](<fig_Relayer\LIN2.png>)
+![alt text](<fig_Relayer/LIN2.png>)
 <p align="center"><font face="黑体" size=3.>Figure 4 Cross-chain form of using connectors</font></p>
 
 以上两种方式在使用中都有各自的优缺点。我们关注的是互联互通过程中“链不知道彼此存在”这个事实，因此它需要“相信某个人来传递讯息”。所以技术的主要挑战就在于要怎么验证一个送来的讯息的有效性。
@@ -182,7 +182,7 @@ Relayer：负责收集并验证用户的交易，之后将交易批量打包压�
 zkRollup 的本质是将原本在链上的用户状态变更，转移到链下进行，同时通过 zk-SNARK 的Proof 来保证链下用户状态变更过程和结果的正确性。
 
 下图是zk-Relayer的执行过程。
-![alt text](<fig_Relayer\zk-relayer.png>)
+![alt text](<fig_Relayer/zk-relayer.png>)
 <p align="center"><font face="黑体" size=3.>Figure 5 zk-Relayer</font></p>
 
 input：Transactor用私钥签名过的若干transaction和区块链上某个区块的Merkle Tree Root。
@@ -204,7 +204,7 @@ LayerZero使用的是Fig.4的跨链结构，在每个支持网络（以太坊、
 
 它的核心是一个称为“中立的消息传递层”（主要技术是zk-Relayer）。它允许不同的区块链系统之间进行直接的、无需信任的交互，而不依赖于中心化的第三方或桥接器。这种设计减少了攻击面，提高了跨链资产转移的安全性。
 
-![alt text](<fig_Relayer\layerzero.png>)
+![alt text](<fig_Relayer/layerzero.png>)
 <p align="center"><font face="黑体" size=3.>Figure 5 LayerZero</font></p>
 
 LayerZero 将他们在轻量级链上的客户端称为“LayerZero Endpoints”，它们由智能合约组成。

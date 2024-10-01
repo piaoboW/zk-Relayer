@@ -149,7 +149,7 @@ Watcher：负责监督Updater，并在Updater作恶时反应。
 
 由于各个链的区块内容和共识机制不一样，因此Light client验证成本会比其他跨链桥高许多。它的优点是非常安全，它不需要相信Relayer，它会自己验证区块和共识。
 
-#### 3.2.4 cost and Security
+#### 3.2.4 Cost and Security
 
 以上三种跨链桥技术，Trusted Relayers成本最低，因为不需什么复杂的验证，但是Relayer带来的资讯都直接相信，所以安全性最低。
 Optimistic Verification：需要验证Merkle Proof，并且假设至少有一个Watcher是诚实的 cost和Security都一般。

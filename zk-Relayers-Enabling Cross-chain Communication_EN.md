@@ -69,7 +69,7 @@ Cross-chain interactions can be classified into homogeneous cross-chain and hete
 
 Notarization technology is the simplest method for cross-chain transactions of crypto assets. For example, Alice sends asset A to the notary's address and places a sell order on the notary's server. Bob then sends asset B to the notary's address and places a buy order. After the notary facilitates the trade, asset A is sent to Bob's address, and asset B is sent to Alice's address. The drawback of the notary mechanism is the inherent centralization risk.
 
-![alt text](fig_Relayer\deal.png )
+![alt text](fig_Relayer/deal.png )
 <p align="center"><font face="黑体" size=3.>Figure 1 Notary Mechanism</font></p>
 
 
@@ -77,7 +77,7 @@ Notarization technology is the simplest method for cross-chain transactions of c
 
 Hash locking technology involves the locking of assets on their respective chains using a hash lock. A time lock mechanism prevents the retrieval of assets before the preimage of the hash lock is revealed. Hash time locking is not limited to public chains; it can also be integrated into permissioned blockchains. However, hash time locking has limitations, such as potentially leading to unfair trades. For example, the party locking later or unlocking first can decide whether to proceed based on the price of the crypto asset.
 
-![alt text](<fig_Relayer\Hash locked.png>)
+![alt text](<fig_Relayer/Hash locked.png>)
 <p align="center"><font face="黑体" size=3.>Figure 2 Hash locking technology</font></p>
 
 #### 2.2.3  Sidechains
@@ -114,11 +114,11 @@ While cross-chain transfers appear to involve asset movement, they are essential
 
 Since cross-chain transfers are actually information interactions, there can be different implementation methods. For example, the following two diagrams illustrate "A cross-chain form of independent interconnection" and "Cross-chain form of using connectors."
 
-![alt text](<fig_Relayer\LIN1.png>)
+![alt text](<fig_Relayer/LIN1.png>)
 <p align="center"><font face="黑体" size=3.>Figure 3 Cross-chain form of independent interconnection</font></p>
 
 
-![alt text](<fig_Relayer\LIN2.png>)
+![alt text](<fig_Relayer/LIN2.png>)
 <p align="center"><font face="黑体" size=3.>Figure 4 Cross-chain form of using connectors</font></p>
 
 Both methods described above have their own advantages and disadvantages. Our focus is on the fact that, during the interoperability process, "chains are unaware of each other's existence," meaning it requires "trusting someone to relay the message." Therefore, the main technical challenge lies in verifying the validity of a received message.
@@ -185,7 +185,7 @@ In essence, zk-Rollup offloads user state changes from the main chain to off-cha
 
 The diagram below illustrates the zk-Relayer's execution process.
 
-![alt text](<fig_Relayer\zk-relayer.png>)
+![alt text](<fig_Relayer/zk-relayer.png>)
 <p align="center"><font face="黑体" size=3.>Figure 5 zk-Relayer</font></p>
 The input and output of a zk-Relayer's execution process are:
 
@@ -211,7 +211,7 @@ LayerZero uses the cross-chain structure shown in Fig. 4. It deploys a set of sm
 
 At its core is a "neutral message-passing layer" (primarily employing zk-Relayer technology). This enables direct, trustless interaction between different blockchain systems without relying on centralized third parties or bridges. This design reduces the attack surface and enhances the security of cross-chain asset transfers.
 
-![alt text](<fig_Relayer\layerzero.png>)
+![alt text](<fig_Relayer/layerzero.png>)
 <p align="center"><font face="黑体" size=3.>Figure 5 LayerZero</font></p>
 
 LayerZero refers to their light clients on various chains as "LayerZero Endpoints," which consist of smart contracts.
